@@ -146,7 +146,103 @@ MAC Address: 08:00:27:9A:0B:97 (Oracle VirtualBox virtual NIC)
 Read data files from: /usr/bin/../share/nmap
 Nmap done: 1 IP address (1 host up) scanned in 0.41 seconds
 Raw packets sent: 1001 (44.028KB) | Rcvd: 1001 (40.120KB)
-  
+
+UDP Scan :
+─(mayura㉿cyber)-[~]
+└─$ sudo nmap -v -sU -Pn 192.168.108.107
+sudo: unable to resolve host cyber: Name or service not known
+Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 12:00 EST
+Initiating ARP Ping Scan at 12:00
+Scanning 192.168.108.107 [1 port]
+Completed ARP Ping Scan at 12:00, 0.11s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 12:00
+Completed Parallel DNS resolution of 1 host. at 12:00, 0.01s elapsed
+Initiating UDP Scan at 12:00
+Scanning 192.168.108.107 [1000 ports]
+Increasing send delay for 192.168.108.107 from 0 to 50 due to max_successful_tryno increase to 4
+Increasing send delay for 192.168.108.107 from 50 to 100 due to max_successful_tryno increase to 5
+Increasing send delay for 192.168.108.107 from 100 to 200 due to max_successful_tryno increase to 6
+Increasing send delay for 192.168.108.107 from 200 to 400 due to 11 out of 11 dropped probes since last increase.
+Discovered open port 2049/udp on 192.168.108.107
+Increasing send delay for 192.168.108.107 from 400 to 800 due to 11 out of 12 dropped probes since last increase.
+UDP Scan Timing: About 4.69% done; ETC: 12:11 (0:10:30 remaining)
+Discovered open port 111/udp on 192.168.108.107
+UDP Scan Timing: About 7.58% done; ETC: 12:13 (0:12:24 remaining)
+UDP Scan Timing: About 15.65% done; ETC: 12:15 (0:13:18 remaining)
+Discovered open port 137/udp on 192.168.108.107
+UDP Scan Timing: About 19.48% done; ETC: 12:15 (0:12:28 remaining)
+sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
+Offending packet: UDP 192.168.108.209:42739 > 192.168.108.107:21358 ttl=58 id=10717 iplen=28 
+sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
+Offending packet: UDP 192.168.108.209:42741 > 192.168.108.107:21358 ttl=54 id=41001 iplen=28 
+sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
+Offending packet: UDP 192.168.108.209:42743 > 192.168.108.107:21358 ttl=50 id=3891 iplen=28 
+sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
+Offending packet: UDP 192.168.108.209:42745 > 192.168.108.107:21358 ttl=38 id=56672 iplen=28 
+sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
+Offending packet: UDP 192.168.108.209:42747 > 192.168.108.107:21358 ttl=43 id=36770 iplen=28 
+sendto in send_ip_packet_sd: sendto(5, packet, 68, 0, 192.168.108.107, 16) => Network is unreachable
+Offending packet: UDP 192.168.108.209:42772 > 192.168.108.107:36778 ttl=54 id=46587 iplen=68 
+sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
+Offending packet: UDP 192.168.108.209:42749 > 192.168.108.107:21358 ttl=43 id=40951 iplen=28 
+sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
+Offending packet: UDP 192.168.108.209:42751 > 192.168.108.107:21358 ttl=59 id=40175 iplen=28 
+sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
+Offending packet: UDP 192.168.108.209:42753 > 192.168.108.107:21358 ttl=40 id=42117 iplen=28 
+sendto in send_ip_packet_sd: sendto(5, packet, 68, 0, 192.168.108.107, 16) => Network is unreachable
+Offending packet: UDP 192.168.108.209:42739 > 192.168.108.107:44946 ttl=47 id=14903 iplen=68 
+Omitting future Sendto error messages now that 10 have been shown.  Use -d2 if you really want to see them.
+UDP Scan Timing: About 23.88% done; ETC: 12:17 (0:13:17 remaining)
+UDP Scan Timing: About 24.30% done; ETC: 12:19 (0:14:32 remaining)
+UDP Scan Timing: About 24.73% done; ETC: 12:20 (0:15:44 remaining)
+UDP Scan Timing: About 25.15% done; ETC: 12:22 (0:16:52 remaining)
+UDP Scan Timing: About 25.61% done; ETC: 12:24 (0:18:03 remaining)
+UDP Scan Timing: About 26.11% done; ETC: 12:26 (0:19:17 remaining)
+UDP Scan Timing: About 26.71% done; ETC: 12:28 (0:20:37 remaining)
+UDP Scan Timing: About 27.39% done; ETC: 12:30 (0:22:03 remaining)
+Increasing send delay for 192.168.108.107 from 800 to 1000 due to 71 out of 235 dropped probes since last increase.
+UDP Scan Timing: About 28.18% done; ETC: 12:32 (0:23:37 remaining)
+UDP Scan Timing: About 28.81% done; ETC: 12:35 (0:25:17 remaining)
+UDP Scan Timing: About 29.60% done; ETC: 12:38 (0:27:04 remaining)
+UDP Scan Timing: About 30.51% done; ETC: 12:41 (0:29:00 remaining)
+UDP Scan Timing: About 31.62% done; ETC: 12:45 (0:31:06 remaining)
+UDP Scan Timing: About 33.05% done; ETC: 12:49 (0:33:23 remaining)
+UDP Scan Timing: About 34.94% done; ETC: 12:55 (0:35:55 remaining)
+UDP Scan Timing: About 37.81% done; ETC: 13:02 (0:38:42 remaining)
+UDP Scan Timing: About 45.56% done; ETC: 13:16 (0:41:49 remaining)
+UDP Scan Timing: About 52.74% done; ETC: 14:42 (1:16:48 remaining)
+UDP Scan Timing: About 49.10% done; ETC: 14:55 (1:29:22 remaining)
+UDP Scan Timing: About 52.10% done; ETC: 14:46 (1:19:43 remaining)
+UDP Scan Timing: About 55.00% done; ETC: 14:38 (1:11:21 remaining)
+UDP Scan Timing: About 58.30% done; ETC: 14:30 (1:02:46 remaining)
+UDP Scan Timing: About 61.60% done; ETC: 14:23 (0:55:03 remaining)
+UDP Scan Timing: About 65.10% done; ETC: 14:16 (0:47:40 remaining)
+UDP Scan Timing: About 68.70% done; ETC: 14:10 (0:40:47 remaining)
+UDP Scan Timing: About 72.60% done; ETC: 14:04 (0:34:01 remaining)
+UDP Scan Timing: About 76.62% done; ETC: 13:58 (0:27:44 remaining)
+UDP Scan Timing: About 80.82% done; ETC: 13:53 (0:21:44 remaining)
+UDP Scan Timing: About 85.22% done; ETC: 13:48 (0:16:03 remaining)
+UDP Scan Timing: About 89.92% done; ETC: 13:43 (0:10:28 remaining)
+Discovered open port 53/udp on 192.168.108.107
+UDP Scan Timing: About 94.72% done; ETC: 13:39 (0:05:15 remaining)
+Completed UDP Scan at 13:39, 5958.10s elapsed (1000 total ports)
+Nmap scan report for 192.168.108.107
+Host is up (0.0015s latency).
+Not shown: 993 closed udp ports (port-unreach)
+PORT     STATE         SERVICE
+53/udp   open          domain
+68/udp   open|filtered dhcpc
+69/udp   open|filtered tftp
+111/udp  open          rpcbind
+137/udp  open          netbios-ns
+138/udp  open|filtered netbios-dgm
+2049/udp open          nfs
+MAC Address: 08:00:27:9A:0B:97 (Oracle VirtualBox virtual NIC)
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 5958.45 seconds
+Raw packets sent: 1230 (57.997KB) | Rcvd: 1044 (78.525KB)
+                                                                          
 Scanning the most popular ports:
 nmap --top-ports 20 192.168.108.107
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 11:37 EST
