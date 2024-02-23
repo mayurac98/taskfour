@@ -1,0 +1,177 @@
+IP Address of Metasploitable2         192.168.108.107 08:00:27:9a:0b:97      1      60  PCS Systemtechnik GmbH                                                                                         
+
+Scanning IP address using nmap:
+nmap 192.168.108.107
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 11:13 EST
+Nmap scan report for 192.168.108.107
+Host is up (0.0016s latency).
+Not shown: 977 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+1099/tcp open  rmiregistry
+1524/tcp open  ingreslock
+2049/tcp open  nfs
+2121/tcp open  ccproxy-ftp
+3306/tcp open  mysql
+5432/tcp open  postgresql
+5900/tcp open  vnc
+6000/tcp open  X11
+6667/tcp open  irc
+8009/tcp open  ajp13
+8180/tcp open  unknown
+Nmap done: 1 IP address (1 host up) scanned in 0.32 seconds
+
+Nmap port scan: 
+mayura㉿cyber)-[~]
+└─$ sudo nmap -p 80 192.168.108.107
+sudo: unable to resolve host cyber: Name or service not known
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 12:02 EST
+Nmap scan report for 192.168.108.107
+Host is up (0.00063s latency).
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 08:00:27:9A:0B:97 (Oracle VirtualBox virtual NIC)
+Nmap done: 1 IP address (1 host up) scanned in 0.43 seconds
+                                                                                                                                                                                                                                          
+TCP Connect scan:
+┌──(mayura㉿cyber)-[~]
+└─$ sudo nmap -sT 192.168.108.107
+sudo: unable to resolve host cyber: Name or service not known
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 11:15 EST
+Nmap scan report for 192.168.108.107
+Host is up (0.00076s latency).
+Not shown: 977 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+1099/tcp open  rmiregistry
+1524/tcp open  ingreslock
+2049/tcp open  nfs
+2121/tcp open  ccproxy-ftp
+3306/tcp open  mysql
+5432/tcp open  postgresql
+5900/tcp open  vnc
+6000/tcp open  X11
+6667/tcp open  irc
+8009/tcp open  ajp13
+8180/tcp open  unknown
+MAC Address: 08:00:27:9A:0B:97 (Oracle VirtualBox virtual NIC)
+Nmap done: 1 IP address (1 host up) scanned in 0.60 seconds
+
+TCP SYN Scan or Stealth scan:
+└─$ sudo nmap -v -sS -Pn 192.168.108.107
+sudo: unable to resolve host cyber: Name or service not known
+Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 11:49 EST
+Initiating ARP Ping Scan at 11:49
+Scanning 192.168.108.107 [1 port]
+Completed ARP Ping Scan at 11:49, 0.10s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 11:49
+Completed Parallel DNS resolution of 1 host. at 11:49, 0.01s elapsed
+Initiating SYN Stealth Scan at 11:49
+Scanning 192.168.108.107 [1000 ports]
+Discovered open port 5900/tcp on 192.168.108.107
+Discovered open port 3306/tcp on 192.168.108.107
+Discovered open port 22/tcp on 192.168.108.107
+Discovered open port 21/tcp on 192.168.108.107
+Discovered open port 25/tcp on 192.168.108.107
+Discovered open port 80/tcp on 192.168.108.107
+Discovered open port 445/tcp on 192.168.108.107
+Discovered open port 111/tcp on 192.168.108.107
+Discovered open port 139/tcp on 192.168.108.107
+Discovered open port 23/tcp on 192.168.108.107
+Discovered open port 53/tcp on 192.168.108.107
+Discovered open port 514/tcp on 192.168.108.107
+Discovered open port 512/tcp on 192.168.108.107
+Discovered open port 2121/tcp on 192.168.108.107
+Discovered open port 8180/tcp on 192.168.108.107
+Discovered open port 8009/tcp on 192.168.108.107
+Discovered open port 1524/tcp on 192.168.108.107
+Discovered open port 2049/tcp on 192.168.108.107
+Discovered open port 5432/tcp on 192.168.108.107
+Discovered open port 6000/tcp on 192.168.108.107
+Discovered open port 513/tcp on 192.168.108.107
+Discovered open port 1099/tcp on 192.168.108.107
+Discovered open port 6667/tcp on 192.168.108.107
+Completed SYN Stealth Scan at 11:49, 0.11s elapsed (1000 total ports)
+Nmap scan report for 192.168.108.107
+Host is up (0.00038s latency).
+Not shown: 977 closed tcp ports (reset)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+1099/tcp open  rmiregistry
+1524/tcp open  ingreslock
+2049/tcp open  nfs
+2121/tcp open  ccproxy-ftp
+3306/tcp open  mysql
+5432/tcp open  postgresql
+5900/tcp open  vnc
+6000/tcp open  X11
+6667/tcp open  irc
+8009/tcp open  ajp13
+8180/tcp open  unknown
+MAC Address: 08:00:27:9A:0B:97 (Oracle VirtualBox virtual NIC)
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.41 seconds
+Raw packets sent: 1001 (44.028KB) | Rcvd: 1001 (40.120KB)
+  
+Scanning the most popular ports:
+nmap --top-ports 20 192.168.108.107
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 11:37 EST
+Nmap scan report for 192.168.108.107
+Host is up (0.00045s latency).
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   open   smtp
+53/tcp   open   domain
+80/tcp   open   http
+110/tcp  closed pop3
+111/tcp  open   rpcbind
+135/tcp  closed msrpc
+139/tcp  open   netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp open   mysql
+3389/tcp closed ms-wbt-server
+5900/tcp open   vnc
+8080/tcp closed http-proxy
+Nmap done: 1 IP address (1 host up) scanned in 0.17 seconds
+                                                                                                                                                                                                                                                                                                                                                                                                           
