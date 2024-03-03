@@ -1,10 +1,50 @@
-IP Address of Metasploitable2         192.168.108.107 08:00:27:9a:0b:97      1      60  PCS Systemtechnik GmbH                                                                                         
+IP Address of Metasploitable2   -  192.168.182.107 08:00:27:9a:0b:97      1      60  PCS Systemtechnik GmbH                                   
+
+Scanning all ports in metasploitable2
+nmap -p 1-65535 192.168.182.107
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 12:05 EST
+Nmap scan report for 192.168.182.107
+Host is up (0.0020s latency).
+Not shown: 65505 closed tcp ports (conn-refused)
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+23/tcp    open  telnet
+25/tcp    open  smtp
+53/tcp    open  domain
+80/tcp    open  http
+111/tcp   open  rpcbind
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+512/tcp   open  exec
+513/tcp   open  login
+514/tcp   open  shell
+1099/tcp  open  rmiregistry
+1524/tcp  open  ingreslock
+2049/tcp  open  nfs
+2121/tcp  open  ccproxy-ftp
+3306/tcp  open  mysql
+3632/tcp  open  distccd
+5432/tcp  open  postgresql
+5900/tcp  open  vnc
+6000/tcp  open  X11
+6667/tcp  open  irc
+6697/tcp  open  ircs-u
+8009/tcp  open  ajp13
+8180/tcp  open  unknown
+8787/tcp  open  msgsrvr
+40935/tcp open  unknown
+40938/tcp open  unknown
+42962/tcp open  unknown
+52036/tcp open  unknown
+Nmap done: 1 IP address (1 host up) scanned in 5.54 seconds
 
 Scanning IP address using nmap:
-nmap 192.168.108.107
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 11:13 EST
-Nmap scan report for 192.168.108.107
-Host is up (0.0016s latency).
+┌──(mayura㉿cyber)-[~]
+└─$ nmap 192.168.182.107           
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 12:11 EST
+Nmap scan report for 192.168.182.107
+Host is up (0.0028s latency).
 Not shown: 977 closed tcp ports (conn-refused)
 PORT     STATE SERVICE
 21/tcp   open  ftp
@@ -30,27 +70,25 @@ PORT     STATE SERVICE
 6667/tcp open  irc
 8009/tcp open  ajp13
 8180/tcp open  unknown
-Nmap done: 1 IP address (1 host up) scanned in 0.32 seconds
+Nmap done: 1 IP address (1 host up) scanned in 0.42 seconds
 
 Nmap port scan: 
-mayura㉿cyber)-[~]
-└─$ sudo nmap -p 80 192.168.108.107
-sudo: unable to resolve host cyber: Name or service not known
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 12:02 EST
-Nmap scan report for 192.168.108.107
-Host is up (0.00063s latency).
+sudo nmap -p 80 192.168.182.107  
+[sudo] password for mayura: 
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 12:13 EST
+Nmap scan report for 192.168.182.107
+Host is up (0.00067s latency).
 PORT   STATE SERVICE
 80/tcp open  http
 MAC Address: 08:00:27:9A:0B:97 (Oracle VirtualBox virtual NIC)
-Nmap done: 1 IP address (1 host up) scanned in 0.43 seconds
+Nmap done: 1 IP address (1 host up) scanned in 0.54 seconds
                                                                                                                                                                                                                                           
 TCP Connect scan:
 ┌──(mayura㉿cyber)-[~]
-└─$ sudo nmap -sT 192.168.108.107
-sudo: unable to resolve host cyber: Name or service not known
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 11:15 EST
-Nmap scan report for 192.168.108.107
-Host is up (0.00076s latency).
+└─$ sudo nmap -sT 192.168.182.107
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 12:14 EST
+Nmap scan report for 192.168.182.107
+Host is up (0.0021s latency).
 Not shown: 977 closed tcp ports (conn-refused)
 PORT     STATE SERVICE
 21/tcp   open  ftp
@@ -77,46 +115,46 @@ PORT     STATE SERVICE
 8009/tcp open  ajp13
 8180/tcp open  unknown
 MAC Address: 08:00:27:9A:0B:97 (Oracle VirtualBox virtual NIC)
-Nmap done: 1 IP address (1 host up) scanned in 0.60 seconds
+Nmap done: 1 IP address (1 host up) scanned in 0.61 seconds
 
-TCP SYN Scan or Stealth scan:
-└─$ sudo nmap -v -sS -Pn 192.168.108.107
-sudo: unable to resolve host cyber: Name or service not known
+TCP SYN Scan or Stealth scan:                                                                                                         
+┌──(mayura㉿cyber)-[~]
+└─$ sudo nmap -v -sS -Pn 192.168.182.107
 Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 11:49 EST
-Initiating ARP Ping Scan at 11:49
-Scanning 192.168.108.107 [1 port]
-Completed ARP Ping Scan at 11:49, 0.10s elapsed (1 total hosts)
-Initiating Parallel DNS resolution of 1 host. at 11:49
-Completed Parallel DNS resolution of 1 host. at 11:49, 0.01s elapsed
-Initiating SYN Stealth Scan at 11:49
-Scanning 192.168.108.107 [1000 ports]
-Discovered open port 5900/tcp on 192.168.108.107
-Discovered open port 3306/tcp on 192.168.108.107
-Discovered open port 22/tcp on 192.168.108.107
-Discovered open port 21/tcp on 192.168.108.107
-Discovered open port 25/tcp on 192.168.108.107
-Discovered open port 80/tcp on 192.168.108.107
-Discovered open port 445/tcp on 192.168.108.107
-Discovered open port 111/tcp on 192.168.108.107
-Discovered open port 139/tcp on 192.168.108.107
-Discovered open port 23/tcp on 192.168.108.107
-Discovered open port 53/tcp on 192.168.108.107
-Discovered open port 514/tcp on 192.168.108.107
-Discovered open port 512/tcp on 192.168.108.107
-Discovered open port 2121/tcp on 192.168.108.107
-Discovered open port 8180/tcp on 192.168.108.107
-Discovered open port 8009/tcp on 192.168.108.107
-Discovered open port 1524/tcp on 192.168.108.107
-Discovered open port 2049/tcp on 192.168.108.107
-Discovered open port 5432/tcp on 192.168.108.107
-Discovered open port 6000/tcp on 192.168.108.107
-Discovered open port 513/tcp on 192.168.108.107
-Discovered open port 1099/tcp on 192.168.108.107
-Discovered open port 6667/tcp on 192.168.108.107
-Completed SYN Stealth Scan at 11:49, 0.11s elapsed (1000 total ports)
-Nmap scan report for 192.168.108.107
-Host is up (0.00038s latency).
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 12:16 EST
+Initiating ARP Ping Scan at 12:16
+Scanning 192.168.182.107 [1 port]
+Completed ARP Ping Scan at 12:16, 0.10s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 12:16
+Completed Parallel DNS resolution of 1 host. at 12:16, 0.02s elapsed
+Initiating SYN Stealth Scan at 12:16
+Scanning 192.168.182.107 [1000 ports]
+Discovered open port 3306/tcp on 192.168.182.107
+Discovered open port 21/tcp on 192.168.182.107
+Discovered open port 80/tcp on 192.168.182.107
+Discovered open port 445/tcp on 192.168.182.107
+Discovered open port 53/tcp on 192.168.182.107
+Discovered open port 25/tcp on 192.168.182.107
+Discovered open port 22/tcp on 192.168.182.107
+Discovered open port 23/tcp on 192.168.182.107
+Discovered open port 139/tcp on 192.168.182.107
+Discovered open port 111/tcp on 192.168.182.107
+Discovered open port 5900/tcp on 192.168.182.107
+Discovered open port 2049/tcp on 192.168.182.107
+Discovered open port 1099/tcp on 192.168.182.107
+Discovered open port 8009/tcp on 192.168.182.107
+Discovered open port 1524/tcp on 192.168.182.107
+Discovered open port 513/tcp on 192.168.182.107
+Discovered open port 2121/tcp on 192.168.182.107
+Discovered open port 5432/tcp on 192.168.182.107
+Discovered open port 8180/tcp on 192.168.182.107
+Discovered open port 512/tcp on 192.168.182.107
+Discovered open port 514/tcp on 192.168.182.107
+Discovered open port 6000/tcp on 192.168.182.107
+Discovered open port 6667/tcp on 192.168.182.107
+Completed SYN Stealth Scan at 12:16, 0.19s elapsed (1000 total ports)
+Nmap scan report for 192.168.182.107
+Host is up (0.0013s latency).
 Not shown: 977 closed tcp ports (reset)
 PORT     STATE SERVICE
 21/tcp   open  ftp
@@ -144,91 +182,52 @@ PORT     STATE SERVICE
 8180/tcp open  unknown
 MAC Address: 08:00:27:9A:0B:97 (Oracle VirtualBox virtual NIC)
 Read data files from: /usr/bin/../share/nmap
-Nmap done: 1 IP address (1 host up) scanned in 0.41 seconds
+Nmap done: 1 IP address (1 host up) scanned in 0.50 seconds
 Raw packets sent: 1001 (44.028KB) | Rcvd: 1001 (40.120KB)
-
+                                                                    
 UDP Scan :
 ─(mayura㉿cyber)-[~]
-└─$ sudo nmap -v -sU -Pn 192.168.108.107
-sudo: unable to resolve host cyber: Name or service not known
+└─$  sudo nmap -v -sU -Pn 192.168.182.107
 Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 12:00 EST
-Initiating ARP Ping Scan at 12:00
-Scanning 192.168.108.107 [1 port]
-Completed ARP Ping Scan at 12:00, 0.11s elapsed (1 total hosts)
-Initiating Parallel DNS resolution of 1 host. at 12:00
-Completed Parallel DNS resolution of 1 host. at 12:00, 0.01s elapsed
-Initiating UDP Scan at 12:00
-Scanning 192.168.108.107 [1000 ports]
-Increasing send delay for 192.168.108.107 from 0 to 50 due to max_successful_tryno increase to 4
-Increasing send delay for 192.168.108.107 from 50 to 100 due to max_successful_tryno increase to 5
-Increasing send delay for 192.168.108.107 from 100 to 200 due to max_successful_tryno increase to 6
-Increasing send delay for 192.168.108.107 from 200 to 400 due to 11 out of 11 dropped probes since last increase.
-Discovered open port 2049/udp on 192.168.108.107
-Increasing send delay for 192.168.108.107 from 400 to 800 due to 11 out of 12 dropped probes since last increase.
-UDP Scan Timing: About 4.69% done; ETC: 12:11 (0:10:30 remaining)
-Discovered open port 111/udp on 192.168.108.107
-UDP Scan Timing: About 7.58% done; ETC: 12:13 (0:12:24 remaining)
-UDP Scan Timing: About 15.65% done; ETC: 12:15 (0:13:18 remaining)
-Discovered open port 137/udp on 192.168.108.107
-UDP Scan Timing: About 19.48% done; ETC: 12:15 (0:12:28 remaining)
-sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
-Offending packet: UDP 192.168.108.209:42739 > 192.168.108.107:21358 ttl=58 id=10717 iplen=28 
-sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
-Offending packet: UDP 192.168.108.209:42741 > 192.168.108.107:21358 ttl=54 id=41001 iplen=28 
-sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
-Offending packet: UDP 192.168.108.209:42743 > 192.168.108.107:21358 ttl=50 id=3891 iplen=28 
-sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
-Offending packet: UDP 192.168.108.209:42745 > 192.168.108.107:21358 ttl=38 id=56672 iplen=28 
-sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
-Offending packet: UDP 192.168.108.209:42747 > 192.168.108.107:21358 ttl=43 id=36770 iplen=28 
-sendto in send_ip_packet_sd: sendto(5, packet, 68, 0, 192.168.108.107, 16) => Network is unreachable
-Offending packet: UDP 192.168.108.209:42772 > 192.168.108.107:36778 ttl=54 id=46587 iplen=68 
-sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
-Offending packet: UDP 192.168.108.209:42749 > 192.168.108.107:21358 ttl=43 id=40951 iplen=28 
-sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
-Offending packet: UDP 192.168.108.209:42751 > 192.168.108.107:21358 ttl=59 id=40175 iplen=28 
-sendto in send_ip_packet_sd: sendto(5, packet, 28, 0, 192.168.108.107, 16) => Network is unreachable
-Offending packet: UDP 192.168.108.209:42753 > 192.168.108.107:21358 ttl=40 id=42117 iplen=28 
-sendto in send_ip_packet_sd: sendto(5, packet, 68, 0, 192.168.108.107, 16) => Network is unreachable
-Offending packet: UDP 192.168.108.209:42739 > 192.168.108.107:44946 ttl=47 id=14903 iplen=68 
-Omitting future Sendto error messages now that 10 have been shown.  Use -d2 if you really want to see them.
-UDP Scan Timing: About 23.88% done; ETC: 12:17 (0:13:17 remaining)
-UDP Scan Timing: About 24.30% done; ETC: 12:19 (0:14:32 remaining)
-UDP Scan Timing: About 24.73% done; ETC: 12:20 (0:15:44 remaining)
-UDP Scan Timing: About 25.15% done; ETC: 12:22 (0:16:52 remaining)
-UDP Scan Timing: About 25.61% done; ETC: 12:24 (0:18:03 remaining)
-UDP Scan Timing: About 26.11% done; ETC: 12:26 (0:19:17 remaining)
-UDP Scan Timing: About 26.71% done; ETC: 12:28 (0:20:37 remaining)
-UDP Scan Timing: About 27.39% done; ETC: 12:30 (0:22:03 remaining)
-Increasing send delay for 192.168.108.107 from 800 to 1000 due to 71 out of 235 dropped probes since last increase.
-UDP Scan Timing: About 28.18% done; ETC: 12:32 (0:23:37 remaining)
-UDP Scan Timing: About 28.81% done; ETC: 12:35 (0:25:17 remaining)
-UDP Scan Timing: About 29.60% done; ETC: 12:38 (0:27:04 remaining)
-UDP Scan Timing: About 30.51% done; ETC: 12:41 (0:29:00 remaining)
-UDP Scan Timing: About 31.62% done; ETC: 12:45 (0:31:06 remaining)
-UDP Scan Timing: About 33.05% done; ETC: 12:49 (0:33:23 remaining)
-UDP Scan Timing: About 34.94% done; ETC: 12:55 (0:35:55 remaining)
-UDP Scan Timing: About 37.81% done; ETC: 13:02 (0:38:42 remaining)
-UDP Scan Timing: About 45.56% done; ETC: 13:16 (0:41:49 remaining)
-UDP Scan Timing: About 52.74% done; ETC: 14:42 (1:16:48 remaining)
-UDP Scan Timing: About 49.10% done; ETC: 14:55 (1:29:22 remaining)
-UDP Scan Timing: About 52.10% done; ETC: 14:46 (1:19:43 remaining)
-UDP Scan Timing: About 55.00% done; ETC: 14:38 (1:11:21 remaining)
-UDP Scan Timing: About 58.30% done; ETC: 14:30 (1:02:46 remaining)
-UDP Scan Timing: About 61.60% done; ETC: 14:23 (0:55:03 remaining)
-UDP Scan Timing: About 65.10% done; ETC: 14:16 (0:47:40 remaining)
-UDP Scan Timing: About 68.70% done; ETC: 14:10 (0:40:47 remaining)
-UDP Scan Timing: About 72.60% done; ETC: 14:04 (0:34:01 remaining)
-UDP Scan Timing: About 76.62% done; ETC: 13:58 (0:27:44 remaining)
-UDP Scan Timing: About 80.82% done; ETC: 13:53 (0:21:44 remaining)
-UDP Scan Timing: About 85.22% done; ETC: 13:48 (0:16:03 remaining)
-UDP Scan Timing: About 89.92% done; ETC: 13:43 (0:10:28 remaining)
-Discovered open port 53/udp on 192.168.108.107
-UDP Scan Timing: About 94.72% done; ETC: 13:39 (0:05:15 remaining)
-Completed UDP Scan at 13:39, 5958.10s elapsed (1000 total ports)
-Nmap scan report for 192.168.108.107
-Host is up (0.0015s latency).
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 12:19 EST
+Initiating ARP Ping Scan at 12:19
+Scanning 192.168.182.107 [1 port]
+Completed ARP Ping Scan at 12:19, 0.10s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 12:19
+Completed Parallel DNS resolution of 1 host. at 12:19, 0.01s elapsed
+Initiating UDP Scan at 12:19
+Scanning 192.168.182.107 [1000 ports]
+Increasing send delay for 192.168.182.107 from 0 to 50 due to max_successful_tryno increase to 4
+Increasing send delay for 192.168.182.107 from 50 to 100 due to max_successful_tryno increase to 5
+Increasing send delay for 192.168.182.107 from 100 to 200 due to max_successful_tryno increase to 6
+Increasing send delay for 192.168.182.107 from 200 to 400 due to max_successful_tryno increase to 7
+Increasing send delay for 192.168.182.107 from 400 to 800 due to 11 out of 12 dropped probes since last increase.
+UDP Scan Timing: About 4.29% done; ETC: 12:31 (0:11:32 remaining)
+UDP Scan Timing: About 7.07% done; ETC: 12:33 (0:13:22 remaining)
+UDP Scan Timing: About 11.70% done; ETC: 12:35 (0:14:05 remaining)
+Discovered open port 137/udp on 192.168.182.107
+Discovered open port 111/udp on 192.168.182.107
+UDP Scan Timing: About 20.53% done; ETC: 12:35 (0:13:13 remaining)
+UDP Scan Timing: About 28.08% done; ETC: 12:36 (0:12:20 remaining)
+UDP Scan Timing: About 33.64% done; ETC: 12:36 (0:11:28 remaining)
+UDP Scan Timing: About 38.99% done; ETC: 12:36 (0:10:35 remaining)
+UDP Scan Timing: About 44.64% done; ETC: 12:36 (0:09:38 remaining)
+UDP Scan Timing: About 49.90% done; ETC: 12:36 (0:08:45 remaining)
+UDP Scan Timing: About 55.03% done; ETC: 12:36 (0:07:51 remaining)
+UDP Scan Timing: About 60.29% done; ETC: 12:36 (0:06:58 remaining)
+UDP Scan Timing: About 65.33% done; ETC: 12:36 (0:06:05 remaining)
+UDP Scan Timing: About 70.22% done; ETC: 12:36 (0:05:12 remaining)
+Discovered open port 53/udp on 192.168.182.107
+UDP Scan Timing: About 75.53% done; ETC: 12:36 (0:04:16 remaining)
+UDP Scan Timing: About 80.79% done; ETC: 12:36 (0:03:21 remaining)
+Discovered open port 2049/udp on 192.168.182.107
+UDP Scan Timing: About 85.91% done; ETC: 12:36 (0:02:28 remaining)
+UDP Scan Timing: About 87.86% done; ETC: 13:15 (0:06:52 remaining)
+UDP Scan Timing: About 92.87% done; ETC: 13:13 (0:03:53 remaining)
+UDP Scan Timing: About 97.81% done; ETC: 13:12 (0:01:09 remaining)
+Completed UDP Scan at 13:11, 3149.99s elapsed (1000 total ports)
+Nmap scan report for 192.168.182.107
+Host is up (0.0014s latency).
 Not shown: 993 closed udp ports (port-unreach)
 PORT     STATE         SERVICE
 53/udp   open          domain
@@ -240,14 +239,15 @@ PORT     STATE         SERVICE
 2049/udp open          nfs
 MAC Address: 08:00:27:9A:0B:97 (Oracle VirtualBox virtual NIC)
 Read data files from: /usr/bin/../share/nmap
-Nmap done: 1 IP address (1 host up) scanned in 5958.45 seconds
-Raw packets sent: 1230 (57.997KB) | Rcvd: 1044 (78.525KB)
+Nmap done: 1 IP address (1 host up) scanned in 3150.37 seconds
+Raw packets sent: 1480 (66.926KB) | Rcvd: 1101 (79.999KB)
+
                                                                           
 Scanning the most popular ports:
-nmap --top-ports 20 192.168.108.107
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-23 11:37 EST
-Nmap scan report for 192.168.108.107
-Host is up (0.00045s latency).
+nmap --top-ports 20 192.168.182.107
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-03-03 12:18 EST
+Nmap scan report for 192.168.182.107
+Host is up (0.0040s latency).
 PORT     STATE  SERVICE
 21/tcp   open   ftp
 22/tcp   open   ssh
@@ -269,5 +269,5 @@ PORT     STATE  SERVICE
 3389/tcp closed ms-wbt-server
 5900/tcp open   vnc
 8080/tcp closed http-proxy
-Nmap done: 1 IP address (1 host up) scanned in 0.17 seconds
-                                                                                                                                                                                                                                                                                                                                                                                                           
+Nmap done: 1 IP address (1 host up) scanned in 0.32 seconds
+                                                                                                                                                                                                                                                                                                                           
